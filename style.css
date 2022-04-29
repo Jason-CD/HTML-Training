@@ -19,15 +19,52 @@ h4 {
 }
 
 .header {
-  padding: 48px 16px;
+  padding: 30px 16px;
   text-align: center;
   background-color: aquamarine;
 }
 
 .main {
-  padding: 16px;
   max-width: 800px;
+  padding: 16px;
+  margin: 0 auto;
 }
 
-p {
+.main > * + * {
+  margin-top: 60px;
+}
+
+.Links + .Links {
+  margin-left: 30px;
+}
+
+.Links {
+  padding: 5px 10px;
+  color: darkcyan;
+}
+
+.Links:active {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border: 4px solid darkcyan;
+}
+
+.Links:hover {
+  color: black;
+  background-color: darkcyan;
+  border: 4px solid white;
+}
+
+.main > article {
+  border-top: 4px solid darkcyan;
+}
+
+::selection {
+  color: white;
+  background-color: black;
+}
+
+.Head::after {
+  content: "👾";
 }
