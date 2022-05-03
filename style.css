@@ -30,6 +30,7 @@ h4 {
   font-family: "Bebas Neue", cursive;
   color: rgb(30, 101, 255);
 }
+/*********************************************************************************************************/
 
 .header {
   padding: 1.8rem 1rem;
@@ -39,23 +40,65 @@ h4 {
   position: relative;
 }
 
-.main {
-  max-width: 50rem;
-  padding: 1rem;
-  margin: 0 auto;
+.heading-group {
+  font-size: 4rem;
 }
 
-.main > * + * {
-  margin-top: 3.8rem;
+.main-heading {
+  font-size: 1em;
 }
 
-.main > *:first-child {
-  border-top: none;
+.profession {
+  font-size: 0.25em;
 }
 
-.Links + .Links {
-  margin-left: 2rem;
+.profession::after {
+  content: "👾";
 }
+
+.hire-me {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: cornflowerblue;
+  color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+@media screen and (min-width: 768px) {
+  .Links + .Links {
+    margin-left: 1rem;
+  }
 
 .Links {
   padding: 0.3rem 0.6rem;
@@ -75,6 +118,26 @@ h4 {
   border: 0.25rem solid white;
 }
 
+.main {
+  max-width: 50rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.main > * + * {
+  margin-top: 3.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
 .main > * {
   border-top: 0.25rem solid darkcyan;
   padding: 0 2rem;
@@ -85,63 +148,15 @@ h4 {
   background-color: black;
 }
 
-.profession::after {
-  content: "👾";
-}
-
-.experience-heading {
-  display: inline-block;
-}
-
-.experience-subheading {
-  display: inline-block;
-}
-
-.hire-me {
-  position: absolute;
-  right: 1.6rem;
-  top: 1.6rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  background-color: cornflowerblue;
-  color: black;
-}
-
-.article-heading {
-  position: relative;
-  left: -2rem;
-}
-
-.heading-group {
-  font-size: 4rem;
-}
-
-.main-heading {
-  font-size: 1em;
-}
-
-.profession {
-  font-size: 0.25em;
-}
-
-@media screen and (min-width: 992px) {
-  .hire-me {
-    position: fixed;
-  }
-}
-
-@media print {
-  .hire-me {
-    display: none;
-  }
-
-  .navigation {
-    display: none;
-  }
+.exp-header {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
-  .main > * + * {
-    margin-top: 5rem;
+  .exp-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
-}
