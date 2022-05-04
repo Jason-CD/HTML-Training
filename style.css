@@ -40,6 +40,11 @@ h4 {
   position: relative;
 }
 
+.article-heading {
+  position: relative;
+  left: -1rem;
+}
+
 .heading-group {
   font-size: 4rem;
 }
