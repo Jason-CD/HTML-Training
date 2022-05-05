@@ -153,6 +153,8 @@ h4 {
   left: -1rem;
 }
 
+
+
 @media screen and (min-width: 768px) {
   .main-article {
     display: grid;
@@ -177,7 +179,7 @@ h4 {
   border-top: none;
 }
 
-.main > * {
+.main-article {
   border-top: 0.25rem solid darkcyan;
   padding: 0 1rem;
 }
