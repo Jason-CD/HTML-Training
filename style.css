@@ -40,10 +40,9 @@ h4 {
   position: relative;
 }
 
-.article-heading {
-  position: relative;
-  left: -1rem;
-}
+ 
+
+
 
 .heading-group {
   font-size: 4rem;
@@ -67,9 +66,18 @@ h4 {
   top: 1.6rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  opacity: 0,5;
   border: 2px solid black;
   background-color:lightseagreen;
   color: black;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 @media screen and (min-width: 992px) {
@@ -101,6 +109,14 @@ h4 {
     justify-content: center;
   }
 
+  .Links:focus {
+    background-color:lightseagreen;
+    outline-color: white;
+    outline-style: dotted;
+  }
+  
+  
+
 @media screen and (min-width: 768px) {
   .Links + .Links {
     margin-left: 1rem;
@@ -110,10 +126,11 @@ h4 {
 .Links, .footer-link {
   padding: 0.3rem 0.6rem;
   color:rgb(14, 111, 111);
+  transition: background-color 0.25s ease-in-out;
 }
 
 .Links:active {
-  font-size: 20px;
+ 
   color: white;
   background-color: black;
   border: 0.25rem solid darkcyan;
@@ -126,10 +143,25 @@ h4 {
 }
 
 .main {
-  max-width: 50rem;
+  max-width: 35rem;
   padding: 1rem;
   margin: 0 auto;
 }
+
+.article-heading {
+  position: relative;
+  left: -1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .main-article-content {
+    margin-top: 4rem;
+  }
 
 .main > * + * {
   margin-top: 3.8rem;
@@ -147,7 +179,7 @@ h4 {
 
 .main > * {
   border-top: 0.25rem solid darkcyan;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 ::selection {
@@ -173,3 +205,6 @@ padding: 1rem;
     text-align: center;
     background-image: linear-gradient(to right top,rgba(9, 216, 216, 0.753) 20%, aquamarine 60%, white);
   }
+
+
+  
